@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="public/css/style.css">
+    <script type="text/javascript" src="public/js/jquery.js"></script>
+    <script type="text/javascript" src="public/js/main.js"></script>
+    <title>LOCATIA</title>
+</head>
+<body>
+<div class="favourite">
+    <a href="#">
+        <svg>
+            <use href="public/svg/heart.svg#heart"></use>
+        </svg>
+        <span>Favorits</span>
+    </a>
+
+</div>
+<header id="header">
+    <div class="close"><a href="#header">
+        <svg>
+            <use href="public/svg/sprite.svg#check"></use>
+        </svg>
+    </a></div>
+    <div class="filters">
+        <ul>
+            <li class="filters__list">
+                <a class="activator" href="#"><span class="label">Ville</span><span class="label__selected">Marrakech</span></a>
+                <div class="listbox">
+                    <h2>Séléctionnez une ville</h2>
+                    <ul>
+                        <li><a class="item" href="#">Marrakech</a></li>
+                        <li><a class="item" href="#">Casablanca</a></li>
+                        <li><a class="item" href="#">Rabat</a></li>
+                        <li><a class="item" href="#">Chefchaouen</a></li>
+                        <li><a class="item" href="#">Kénitra</a></li>
+                        <li><a class="item" href="#">Essaouira</a></li>
+                    </ul>
+                    <a class="cancel" href="#">&darr;</a>
+                </div>
+            </li>
+            <li class="filters__list"><a class="activator" href="#"><span class="label">Zone</span><span class="label__selected">Centre ville Guéliz</span></a>
+                <div id="zones" class="listbox">
+                    <h2>Séléctionnez une zone</h2>
+                    <ul>
+                        <li><a class="item" href="#">Toutes les zones</a></li>
+                        <li><a class="item" href="#">Guéliz</a></li>
+                        <li><a class="item" href="#">Ménara</a></li>
+                        <li><a class="item" href="#">Jamaa elfna</a></li>
+                        <li><a class="item" href="#">Daoudiate</a></li>
+                        <li><a class="item" href="#">M'hamid</a></li>
+                        <li><a class="item" href="#">SYBA</a></li>
+                    </ul>
+                    <a class="cancel" href="#">&darr;</a>
+                </div>
+            </li>
+            <li class="filters__list"><a class="activator" href="#"><span class="label">Type du bien</span><span class="label__selected">Duplexe</span></a>
+                <div id="types" class="listbox">
+                    <h2>Séléctionnez un type</h2>
+                    <ul>
+                        <li><a class="item" href="#">Tout type</a></li>
+                        <li><a class="item" href="#">Appartement</a></li>
+                        <li><a class="item" href="#">Duplexe</a></li>
+                        <li><a class="item" href="#">Maison</a></li>
+                        <li><a class="item" href="#">Ryad</a></li>
+                        <li><a class="item" href="#">Auberge</a></li>
+                    </ul>
+                    <a class="cancel" href="#">&darr;</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="sorting">
+        <ul>
+            <li class="sorting__list">
+                <a class="activator" href="#">
+                    <svg>
+                        <use href="public/svg/sprite.svg#price"></use>
+                    </svg>
+                    <span>Prix</span>
+                    <span class="result">
+                        <span id="start_price" class="start"></span>
+                        <span style="visibility: hidden" id="dash_price">&ndash;</span>
+                        <span id="end_price" class="end"></span>
+                    </span>
+                </a>
+                <div class="fields">
+                    <form>
+                            <label for="min_price">Min</label>
+                            <input data-role="à partir de : " id="min_price" type="number" name="min_price">
+
+                            <label for="max_price">Max</label>
+                            <input class="mx" data-role="moins de : " id="max_price" type="number" name="max_price">
+                    </form>
+                </div>
+            </li>
+            <li class="sorting__list">
+                <a class="activator" href="#">
+                    <svg>
+                        <use href="public/svg/sprite.svg#surface"></use>
+                    </svg>
+                    <span>Surface</span>
+                    <span class="result">60m² - 75m²</span>
+                </a>
+                <div class="fields">
+                    <form>
+                        <div>
+                            <label for="min_surface">Min</label>
+                            <input id="min_surface" type="number" name="min_surface">
+                        </div>
+                        <div>
+                            <label for="max_surface">Max</label>
+                            <input id="max_surface" type="number" name="max_surface">
+                        </div>
+
+                    </form>
+                </div>
+            </li>
+            <li class="sorting__list">
+                <a class="activator" href="#">
+                    <svg>
+                        <use href="public/svg/sprite.svg#pieces"></use>
+                    </svg>
+                    <span>Pièces</span>
+                    <span class="result">2P - 3P</span>
+                </a>
+                <div class="pieces">
+                    <div class="checkbox" >
+                        <input id="p1" type="checkbox" name="piece">
+                        <label for="p1">1</label>
+                    </div>
+                    <div class="checkbox" >
+                        <input id="p2" type="checkbox" name="piece">
+                        <label for="p2">2</label>
+                    </div>
+                    <div class="checkbox" >
+                        <input id="p3" type="checkbox" name="piece">
+                        <label for="p3">3</label>
+                    </div>
+                    <div class="checkbox" >
+                        <input id="p4" type="checkbox" name="piece">
+                        <label for="p4">4</label>
+                    </div>
+                    <div class="checkbox" >
+                        <input id="p5" type="checkbox" name="piece">
+                        <label for="p5">5</label>
+                    </div>
+                    <div class="checkbox" >
+                        <input id="p5+" type="checkbox" name="piece">
+                        <label for="p5+">5+</label>
+                    </div>
+
+                </div>
+            </li>
+        </ul>
+    </div>
+</header>
+</body>
+</html>
