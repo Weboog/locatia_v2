@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "compile": "node-sass sass/main.scss public/css/style.css -w --output-style compressed",
-    "live": "live-server"
+    "live": "live-server --browser=chrome"
   },
   "author": "",
   "license": "ISC"
