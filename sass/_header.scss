@@ -117,14 +117,14 @@ header{
           ul{
             align-self: start;
             display: grid;
-            grid-row-gap: 1rem;
+            grid-row-gap: 2rem;
             padding: 0 5rem;
             margin-top: 2rem;
             max-height: 80vh;
             overflow: scroll;
             li{
             display: grid;
-            justify-items: stretch;
+            justify-items: center;
             margin: 0;
               a{
                 color: darken($color-green-forest, 10%);
@@ -133,6 +133,15 @@ header{
                 font-size: 1.6rem;
                 text-align: center;
               }
+              /*&:after{
+                content: "";
+                display: block;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                margin-top: 2rem;
+                background-color: $color-green-forest;
+              }*/
             }
           }
 
