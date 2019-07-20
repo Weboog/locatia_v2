@@ -89,17 +89,17 @@
                     <span>Prix</span>
                     <span class="result">
                         <span id="start_price" class="start"></span>
-                        <span style="visibility: hidden" id="dash_price">&ndash;</span>
+                        <span style="visibility: hidden" id="dash_price" class="dash">&ndash;</span>
                         <span id="end_price" class="end"></span>
                     </span>
                 </a>
                 <div class="fields">
                     <form>
                             <label for="min_price">Min</label>
-                            <input data-role="à partir de : " id="min_price" type="number" name="min_price">
+                            <input class="mn" data-unit="DH"  id="min_price" type="number" name="min_price">
 
                             <label for="max_price">Max</label>
-                            <input class="mx" data-role="moins de : " id="max_price" type="number" name="max_price">
+                            <input class="mx" data-unit="DH"  id="max_price" type="number" name="max_price">
                     </form>
                 </div>
             </li>
@@ -109,19 +109,19 @@
                         <use href="public/svg/sprite.svg#surface"></use>
                     </svg>
                     <span>Surface</span>
-                    <span class="result">60m² - 75m²</span>
+                    <span class="result">
+                        <span id="start_surface" class="start"></span>
+                        <span style="visibility: hidden" id="dash_surface" class="dash">&ndash;</span>
+                        <span id="end_surface" class="end"></span>
+                    </span>
                 </a>
                 <div class="fields">
                     <form>
-                        <div>
                             <label for="min_surface">Min</label>
-                            <input id="min_surface" type="number" name="min_surface">
-                        </div>
-                        <div>
-                            <label for="max_surface">Max</label>
-                            <input id="max_surface" type="number" name="max_surface">
-                        </div>
+                            <input class="mn" data-unit="M²" id="min_surface" type="number" name="min_surface">
 
+                            <label for="max_surface">Max</label>
+                            <input class="mx" data-unit="M²" id="max_surface" type="number" name="max_surface">
                     </form>
                 </div>
             </li>
@@ -131,31 +131,35 @@
                         <use href="public/svg/sprite.svg#pieces"></use>
                     </svg>
                     <span>Pièces</span>
-                    <span class="result">2P - 3P</span>
+                    <span class="result">
+                        <span id="start_room" class="start"></span>
+                        <span style="visibility: hidden" id="dash_room" class="dash">&ndash;</span>
+                        <span id="end_room" class="end"></span>
+                    </span>
                 </a>
                 <div class="pieces">
                     <div class="checkbox" >
-                        <input id="p1" type="checkbox" name="piece">
+                        <input id="p1" type="checkbox" name="piece" value="1">
                         <label for="p1">1</label>
                     </div>
                     <div class="checkbox" >
-                        <input id="p2" type="checkbox" name="piece">
+                        <input id="p2" type="checkbox" name="piece" value="2">
                         <label for="p2">2</label>
                     </div>
                     <div class="checkbox" >
-                        <input id="p3" type="checkbox" name="piece">
+                        <input id="p3" type="checkbox" name="piece" value="3">
                         <label for="p3">3</label>
                     </div>
                     <div class="checkbox" >
-                        <input id="p4" type="checkbox" name="piece">
+                        <input id="p4" type="checkbox" name="piece" value="4">
                         <label for="p4">4</label>
                     </div>
                     <div class="checkbox" >
-                        <input id="p5" type="checkbox" name="piece">
+                        <input id="p5" type="checkbox" name="piece" value="5">
                         <label for="p5">5</label>
                     </div>
                     <div class="checkbox" >
-                        <input id="p5+" type="checkbox" name="piece">
+                        <input id="p5+" type="checkbox" name="piece" value="6">
                         <label for="p5+">5+</label>
                     </div>
 
