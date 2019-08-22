@@ -110,9 +110,8 @@ $(document).ready(function () {
 
     })
     
-    //Select pieces
+    //SELECT PIECES//////////////////////////////////////////////////////
     var checkRooms = $('.checkbox input[type=checkbox]');
-
     checkRooms.on('click', function (e) {
 
         var currentValue = $(this).val();
@@ -121,35 +120,33 @@ $(document).ready(function () {
         var dash = $(this).parents('.pieces:eq(0)').prev().find('span.result > .dash');
         var checked = $('.checkbox input:checked');
 
-
-        startPrice.text(checked.eq(0).val());
-        endPrice.text(checked.eq(1).val());
-
-
-        if (checked.length >= 2) {
+        //Assigning values selected
+        if (checked.length > 2) {
             checked.eq(1).prop('checked', false);
+        }
+
+        if (checked.eq(0).val() !== undefined) {
+            startPrice.text(checked.eq(0).val() + ' P');
+        } else {
+            startPrice.text('');
+        }
+
+        if ( checked.length > 1 && checked.last().val() !== undefined) {
+            endPrice.text(checked.last().val() + ' P');
+        } else {
+            endPrice.text('');
+        }
+
+        //Toggle dash separator
+        if (checked.length >= 2) {
             dash.css({
                 visibility: 'visible'
             })
-        }
-
-        if (checked.length === 1) {
-            endPrice.text('');
-        }
-
-
-        if ($('.checkbox input:checked').length === 0) {
-            startPrice.text('');
-            endPrice.text('');
+        } else {
             dash.css({
                 visibility: 'hidden'
             })
         }
-
-
-
-
-
 
     })
     //HEADER///////////////////////////////////////////
