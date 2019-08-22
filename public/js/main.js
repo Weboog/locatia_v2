@@ -114,7 +114,6 @@ $(document).ready(function () {
     var checkRooms = $('.checkbox input[type=checkbox]');
     checkRooms.on('click', function (e) {
 
-        var currentValue = $(this).val();
         var startPrice = $(this).parents('.pieces:eq(0)').prev().find('span.result > .start');
         var endPrice = $(this).parents('.pieces:eq(0)').prev().find('span.result > .end');
         var dash = $(this).parents('.pieces:eq(0)').prev().find('span.result > .dash');
